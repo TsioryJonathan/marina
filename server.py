@@ -1,9 +1,11 @@
 import os
 import subprocess
+from flask_cors import CORS
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 MARINA_BIN = "/usr/local/bin/marina"
+CORS(app)
 
 
 @app.route("/")
